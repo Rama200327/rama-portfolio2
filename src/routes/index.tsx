@@ -10,15 +10,17 @@ import { focusAreas, profile, projects, skills, stats, type Project } from "@/co
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rama Abuaqoulah — .NET Full Stack Developer" },
+      { title: "Rama Abuaqoulah — Quality Assurance Tester" },
       {
         name: "description",
-        content: "Rama Abuaqoulah builds web apps with ASP.NET Core, C#, SQL Server and JavaScript. Based in Amman, Jordan.",
+        content:
+          "Rama Abuaqoulah tests web applications, writes test cases and reports defects, and builds with ASP.NET Core, C# and SQL Server. Based in Amman, Jordan.",
       },
-      { property: "og:title", content: "Rama Abuaqoulah — .NET Full Stack Developer" },
+      { property: "og:title", content: "Rama Abuaqoulah — Quality Assurance Tester" },
       {
         property: "og:description",
-        content: "Rama Abuaqoulah builds web apps with ASP.NET Core, C#, SQL Server and JavaScript. Based in Amman, Jordan.",
+        content:
+          "Rama Abuaqoulah tests web applications, writes test cases and reports defects, and builds with ASP.NET Core, C# and SQL Server. Based in Amman, Jordan.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -28,6 +30,11 @@ export const Route = createFileRoute("/")({
 });
 
 const ticker = [
+  "Functional Testing",
+  "Test Cases",
+  "Bug Reports",
+  "Regression Testing",
+  "QA Reports",
   "C#",
   "ASP.NET Core",
   "Entity Framework Core",
