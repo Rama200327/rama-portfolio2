@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All portfolio text (bio, experience, projects, skills, contact links) lives in `src/content/profile.ts`; pages only render it, so content edits happen in one place.
+- Each portfolio section (home, projects, experience, contact) is its own route with its own `head()`, so every page is shareable and crawlable.
+- The site also deploys to GitHub Pages: `.github/workflows/deploy-pages.yml` builds with `GITHUB_PAGES_BASE` set, which makes `vite.config.ts` emit a fully prerendered static site under that sub-path; keep public-file links prefixed with `import.meta.env.BASE_URL` so they work on both hosts.
+- The downloadable CV is a real file in `public/` (not a Lovable asset pointer) because GitHub Pages cannot serve Lovable-hosted asset URLs.
