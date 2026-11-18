@@ -14,11 +14,10 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/75 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
+        <Link to="/" aria-label="Rama Abuaqoulah — Home" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary font-display text-sm font-bold text-primary-foreground transition-transform group-hover:rotate-6">
             RA
           </span>
-          <span className="font-display text-lg font-semibold tracking-tight">Rama Abuaqoulah</span>
         </Link>
         <nav className="hidden items-center gap-1 rounded-full border border-border bg-surface/60 p-1 md:flex">
           {nav.map((item) => (
