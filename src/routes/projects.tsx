@@ -1,7 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Check } from "lucide-react";
+import {
+  ArrowUpRight,
+  Check,
+  Database,
+  Globe,
+  ListChecks,
+  RefreshCw,
+  ShieldCheck,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
 
-import { profile, projects, type Project } from "@/content/profile";
+import { SectionHeading } from "@/components/section-heading";
+import { problemsSolved, profile, projects, type Project } from "@/content/profile";
+
+const problemIcons: LucideIcon[] = [ShieldCheck, Globe, Workflow, Database, RefreshCw, ListChecks];
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -77,6 +90,50 @@ function ProjectsPage() {
             </article>
           ))}
         </div>
+
+        {/* Problems I solved */}
+        <section className="mt-24">
+          <SectionHeading eyebrow="Problems I solved">
+            Things that were <span className="text-gradient">broken</span> — and how I fixed them
+          </SectionHeading>
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {problemsSolved.map((p, i) => {
+              const Icon = problemIcons[i] ?? Check;
+              return (
+                <article key={p.title} className="card-glass card-hover flex flex-col p-7">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="icon-tile h-10 w-10">
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <span className="chip-lime">{p.context}</span>
+                  </div>
+                  <h3 className="mt-5 font-display text-xl font-semibold leading-tight">{p.title}</h3>
+                  <dl className="mt-4 space-y-3 text-sm">
+                    <div>
+                      <dt className="font-semibold text-primary">Problem</dt>
+                      <dd className="text-muted-foreground">{p.problem}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary">What I did</dt>
+                      <dd className="text-muted-foreground">{p.action}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-semibold text-primary">Result</dt>
+                      <dd>{p.result}</dd>
+                    </div>
+                  </dl>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="chip">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
 
         <h2 className="font-display-tight mb-8 mt-24 text-3xl md:text-4xl">
           More <span className="text-gradient">projects</span>

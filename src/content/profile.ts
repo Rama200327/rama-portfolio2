@@ -208,3 +208,65 @@ export const languages = [
   { name: "Arabic", level: "Native" },
   { name: "English", level: "Professional working proficiency (TOEFL)" },
 ];
+
+export type SolvedProblem = {
+  title: string;
+  /** Where the problem was met — a role or a project. */
+  context: string;
+  problem: string;
+  action: string;
+  result: string;
+  tags: string[];
+};
+
+/** Real problems met at work or in a project, what was done about them, and the outcome. */
+export const problemsSolved: SolvedProblem[] = [
+  {
+    title: "Defects reaching a live release",
+    context: "GIG Gulf - Jordan",
+    problem: "Agent and Broker workflows in the Insurance Corporate Portal could ship with defects that break a policy.",
+    action: "Wrote and executed test cases for each module, logged every defect with steps to reproduce, and re-ran regression tests after each fix.",
+    result: "Fixes were validated before release and tracked in QA reports.",
+    tags: ["Functional Testing", "Regression Testing", "QA Reports"],
+  },
+  {
+    title: "Bugs reaching real users",
+    context: "Apidog",
+    problem: "Defects on the company website and client projects reached users before anyone checked them.",
+    action: "Ran functional, usability and regression testing, then validated every fix before it went out.",
+    result: "Releases shipped with known defects fixed and documented.",
+    tags: ["Usability Testing", "Defect Reporting", "Regression Testing"],
+  },
+  {
+    title: "Reservation approvals going wrong",
+    context: "VeloraEvents Platform",
+    problem: "Different user roles could book the same event, and approvals had no clear path through the system.",
+    action: "Built role-based booking and a reservation approval workflow backed by the database.",
+    result: "Only approved reservations move forward, with the right role in charge of each one.",
+    tags: ["ASP.NET Core MVC", "EF Core", "SQL Server"],
+  },
+  {
+    title: "Scattered product and order data",
+    context: "All Baby Essentials",
+    problem: "Products, stock and orders had no reliable relationships, so the same item could look different in every screen.",
+    action: "Designed a normalized relational SQL schema and wired it to dynamic Razor views, working in Agile/Scrum.",
+    result: "Inventory and orders stay consistent across the whole store.",
+    tags: ["SQL Server", "Razor", "Agile / Scrum"],
+  },
+  {
+    title: "Live data breaking the page",
+    context: "Gold Price Tracker",
+    problem: "Prices and user data could arrive late or fail, leaving a blank screen for the visitor.",
+    action: "Used async/await with error handling and re-rendered the UI only when new data actually arrived.",
+    result: "The page updates live instead of breaking when the API misbehaves.",
+    tags: ["JavaScript", "REST API", "Error Handling"],
+  },
+  {
+    title: "40+ tasks with no clear priority",
+    context: "Orange Coding School",
+    problem: "Forty-plus tasks and projects ran in parallel, and it was easy to lose track of what was due.",
+    action: "Tracked every task on a Notion Agile board and shipped work through Git/GitHub code review.",
+    result: "All 40+ tasks and projects were delivered on schedule.",
+    tags: ["Notion", "Git & GitHub", "Agile / Scrum"],
+  },
+];

@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
-import { experience, profile } from "@/content/profile";
+import { experience, problemsSolved, profile } from "@/content/profile";
 
 // The Experience page must list the same roles, in the same order and dates, as the CV PDF.
 describe("Experience matches the CV", () => {
@@ -31,5 +31,26 @@ describe("CV download", () => {
   it("points every CV button at the bundled CV file", () => {
     expect(profile.cvUrl.endsWith("/Rama_Abuaqoulah_CV.pdf")).toBe(true);
     expect(existsSync(resolve(__dirname, "../../public/Rama_Abuaqoulah_CV.pdf"))).toBe(true);
+  });
+});
+
+describe("Problems I solved", () => {
+  it("has six cards, each with a problem, an action and a result", () => {
+    expect(problemsSolved).toHaveLength(6);
+    for (const p of problemsSolved) {
+      expect(p.title.trim().length).toBeGreaterThan(0);
+      expect(p.context.trim().length).toBeGreaterThan(0);
+      expect(p.problem.trim().length).toBeGreaterThan(0);
+      expect(p.action.trim().length).toBeGreaterThan(0);
+      expect(p.result.trim().length).toBeGreaterThan(0);
+      expect(p.tags.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("names the roles the problems came from", () => {
+    const contexts = problemsSolved.map((p) => p.context);
+    expect(contexts).toContain("GIG Gulf - Jordan");
+    expect(contexts).toContain("Apidog");
+    expect(contexts).toContain("Orange Coding School");
   });
 });
