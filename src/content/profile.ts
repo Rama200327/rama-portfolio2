@@ -202,6 +202,7 @@ export const stats = [
   { value: "40+", label: "Internship tasks delivered" },
 ];
 
+export const focusAreas = ["Quality Assurance", "Web Development", "Databases"];
 
 export const languages = [
   { name: "Arabic", level: "Native" },
