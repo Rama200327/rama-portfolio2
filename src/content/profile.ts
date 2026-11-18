@@ -16,7 +16,7 @@ export const profile = {
   cvFileName: "Rama_Abuaqoulah_CV.pdf",
   summary:
     "Detail-oriented Computer Science graduate with hands-on software testing experience. Skilled in designing test cases, documenting defects and validating fixes to ensure software quality, with a strong technical background in ASP.NET Core, SQL Server and the software development lifecycle.",
-  stack: ["Functional Testing", "Test Cases", "Regression Testing", "Defect Tracking", "QA Reports", "SQL Server", "ASP.NET Core", "C#", "JavaScript", "Git"],
+  stack: ["Functional Testing", "Test Cases", "Bug Reports", "Regression Testing", "SQL Server", "ASP.NET Core", "C#", "Git"],
 };
 
 export type Experience = {
