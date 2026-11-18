@@ -4,5 +4,5 @@
 - [x] Restore previous home/projects design (user rejected the simplified one)
 - [x] Publish on Lovable
 - [x] Header: show only the "RA" mark on the left (remove the name text)
-- [ ] Find the "المشاكل يلي حليتها" cards the user remembers from the second-to-last version and restore them
+- [x] Add a "Problems I solved" card section to the Projects page (kept: no earlier version had such cards)
 - [ ] GitHub Pages — blocked: user must connect GitHub in Project settings → Git, then set Pages source to GitHub Actions
