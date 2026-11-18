@@ -10,12 +10,12 @@ export const Route = createFileRoute("/experience")({
       { title: "Experience & Skills — Rama Abuaqoulah" },
       {
         name: "description",
-        content: "Work experience at GIG Jordan, Orange Coding School and Apidog, education, and technical skills of Rama Abuaqoulah.",
+        content: "Work experience at GIG Gulf - Jordan, Orange Coding School and Apidog, education, and technical skills of Rama Abuaqoulah.",
       },
       { property: "og:title", content: "Experience & Skills — Rama Abuaqoulah" },
       {
         property: "og:description",
-        content: "Work experience at GIG Jordan, Orange Coding School and Apidog, education, and technical skills of Rama Abuaqoulah.",
+        content: "Work experience at GIG Gulf - Jordan, Orange Coding School and Apidog, education, and technical skills of Rama Abuaqoulah.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

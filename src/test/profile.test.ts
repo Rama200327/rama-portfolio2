@@ -7,7 +7,7 @@ import { experience, profile } from "@/content/profile";
 // The Experience page must list the same roles, in the same order and dates, as the CV PDF.
 describe("Experience matches the CV", () => {
   it("lists GIG, Orange Coding School and Apidog in CV order", () => {
-    expect(experience.map((e) => e.company)).toEqual(["GIG Jordan", "Orange Coding School", "Apidog"]);
+    expect(experience.map((e) => e.company)).toEqual(["GIG Gulf - Jordan", "Orange Coding School", "Apidog"]);
   });
 
   it("uses the CV job titles and dates", () => {

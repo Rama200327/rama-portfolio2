@@ -31,7 +31,7 @@ export type Experience = {
 export const experience: Experience[] = [
   {
     title: "QA Tester & .NET Developer",
-    company: "GIG Jordan",
+    company: "GIG Gulf - Jordan",
     place: "Amman",
     period: "Jul 2026 — Oct 2026",
     points: [
@@ -202,7 +202,6 @@ export const stats = [
   { value: "40+", label: "Internship tasks delivered" },
 ];
 
-export const focusAreas = ["Quality Assurance", "Web Development", "Databases"];
 
 export const languages = [
   { name: "Arabic", level: "Native" },

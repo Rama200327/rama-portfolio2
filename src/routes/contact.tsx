@@ -38,7 +38,7 @@ function ContactPage() {
     { icon: Github, label: "GitHub", value: profile.githubLabel, href: profile.github, external: true },
     { icon: Phone, label: "Phone", value: profile.phone, href: `tel:${profile.phoneHref}` },
     { icon: MapPin, label: "Based in", value: profile.location },
-    { icon: Download, label: "Résumé", value: "Download CV (PDF)", href: profile.cvUrl, external: true, download: profile.cvFileName },
+    { icon: Download, label: "Resume", value: "Download CV (PDF)", href: profile.cvUrl, external: true, download: profile.cvFileName },
   ];
 
   return (
