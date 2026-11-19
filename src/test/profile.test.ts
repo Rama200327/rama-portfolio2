@@ -19,11 +19,11 @@ describe("Experience matches the CV", () => {
   });
 });
 
-describe("Home page title matches the CV", () => {
-  it("shows the CV job title, not the old developer title", () => {
-    expect(profile.role).toBe("Quality Assurance Tester");
-    expect(profile.summary).toMatch(/testing/i);
-    expect(profile.stack[0]).toBe("Functional Testing");
+describe("Home page title", () => {
+  it("shows the real job title the user chose: .NET Full Stack Developer", () => {
+    expect(profile.role).toBe(".NET Full Stack Developer");
+    expect(profile.summary).toMatch(/ASP\.NET Core/);
+    expect(profile.stack[0]).toBe("C#");
   });
 });
 

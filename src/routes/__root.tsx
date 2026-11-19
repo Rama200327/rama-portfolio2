@@ -11,7 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportError } from "../lib/error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
 
@@ -41,7 +41,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (
@@ -84,11 +84,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#0B0B0F" },
-      { title: "Rama Abuaqoulah — Quality Assurance Tester" },
-      { name: "description", content: "Portfolio of Rama Abuaqoulah, a Quality Assurance Tester in Amman, Jordan." },
+      { title: "Rama Abuaqoulah — .NET Full Stack Developer" },
+      { name: "description", content: "Portfolio of Rama Abuaqoulah, a .NET Full Stack Developer in Amman, Jordan." },
       { name: "author", content: "Rama Abuaqoulah" },
-      { property: "og:title", content: "Rama Abuaqoulah — Quality Assurance Tester" },
-      { property: "og:description", content: "Portfolio of Rama Abuaqoulah, a Quality Assurance Tester in Amman, Jordan." },
+      { property: "og:title", content: "Rama Abuaqoulah — .NET Full Stack Developer" },
+      { property: "og:description", content: "Portfolio of Rama Abuaqoulah, a .NET Full Stack Developer in Amman, Jordan." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

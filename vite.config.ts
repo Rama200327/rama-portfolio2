@@ -1,4 +1,4 @@
-// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
+// The shared config package already includes the following — do NOT add them manually
 // or the app will break with duplicate plugins:
 //   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,
 //     nitro (build-only using cloudflare as a default target), VITE_* env injection, @ path alias,
@@ -9,8 +9,8 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Set only by .github/workflows/deploy-pages.yml (e.g. "/Portfolio-Rama/"). When present, the
-// build becomes a fully static, prerendered site for GitHub Pages instead of the Lovable server build.
+// Set only by .github/workflows/deploy-pages.yml (e.g. "/Portfolio/"). When present, the
+// build becomes a fully static, prerendered site for GitHub Pages instead of the server build.
 const pagesBase = process.env["GITHUB_PAGES_BASE"];
 
 export default defineConfig(

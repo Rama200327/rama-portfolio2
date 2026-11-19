@@ -50,8 +50,8 @@ export function TechOrbit() {
 
       {/* hub */}
       <div className="animate-hub absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-2 border-primary bg-background md:h-28 md:w-28">
-        <span className="font-display text-2xl font-bold tracking-tight md:text-3xl">QA</span>
-        <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Tester</span>
+        <span className="font-display text-2xl font-bold tracking-tight md:text-3xl">.NET</span>
+        <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">Full Stack</span>
       </div>
 
       {/* nodes */}

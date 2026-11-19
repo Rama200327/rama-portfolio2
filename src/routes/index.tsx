@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ArrowUpRight, Download, Github, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Download, Github } from "lucide-react";
 
 import { BackgroundSections } from "@/components/background-sections";
 import { SectionHeading } from "@/components/section-heading";
@@ -10,17 +10,17 @@ import { focusAreas, profile, projects, skills, stats, type Project } from "@/co
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rama Abuaqoulah — Quality Assurance Tester" },
+      { title: "Rama Abuaqoulah — .NET Full Stack Developer" },
       {
         name: "description",
         content:
-          "Rama Abuaqoulah tests web applications, writes test cases and reports defects, and builds with ASP.NET Core, C# and SQL Server. Based in Amman, Jordan.",
+          "Rama Abuaqoulah builds web applications with ASP.NET Core, C# and SQL Server, with hands-on QA testing experience. Based in Amman, Jordan.",
       },
-      { property: "og:title", content: "Rama Abuaqoulah — Quality Assurance Tester" },
+      { property: "og:title", content: "Rama Abuaqoulah — .NET Full Stack Developer" },
       {
         property: "og:description",
         content:
-          "Rama Abuaqoulah tests web applications, writes test cases and reports defects, and builds with ASP.NET Core, C# and SQL Server. Based in Amman, Jordan.",
+          "Rama Abuaqoulah builds web applications with ASP.NET Core, C# and SQL Server, with hands-on QA testing experience. Based in Amman, Jordan.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,11 +30,6 @@ export const Route = createFileRoute("/")({
 });
 
 const ticker = [
-  "Functional Testing",
-  "Test Cases",
-  "Bug Reports",
-  "Regression Testing",
-  "QA Reports",
   "C#",
   "ASP.NET Core",
   "Entity Framework Core",
@@ -42,7 +37,8 @@ const ticker = [
   "JavaScript",
   "Razor Views",
   "REST APIs",
-  "Clean Architecture",
+  "Functional Testing",
+  "Regression Testing",
   "Git & GitHub",
   "Figma",
 ];
@@ -55,7 +51,7 @@ function Index() {
       <section className="relative overflow-hidden">
         <div className="bg-grid absolute inset-0" />
         <div className="glow-orb -left-40 top-10 h-[28rem] w-[28rem] opacity-60" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-20 pt-10 md:grid-cols-[1.1fr_1fr] md:gap-8 md:px-8 md:pt-14 lg:gap-14 lg:pt-20">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 pt-6 md:grid-cols-[1.1fr_1fr] md:gap-8 md:px-8 md:pt-8 lg:gap-14 lg:pt-10">
           <div className="animate-rise">
             <div className="mb-6 flex flex-wrap items-center gap-3">
               <span className="chip-lime">
@@ -63,13 +59,9 @@ function Index() {
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-70" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
                 </span>
-                Available for new roles
-              </span>
-              <span className="chip">
-                <MapPin className="mr-1.5 h-3.5 w-3.5 text-primary" /> {profile.location}
+                Available for new roles · {profile.location}
               </span>
             </div>
-            <p className="mb-3 text-lg text-muted-foreground">Hi, I'm</p>
             <h1 className="font-display-tight text-[clamp(3rem,7.5vw,6.25rem)]">
               {profile.firstName}
               <br />
@@ -96,13 +88,6 @@ function Index() {
                 <span key={f} className="flex items-center gap-3">
                   {i > 0 && <span className="text-primary">+</span>}
                   {f}
-                </span>
-              ))}
-            </div>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {profile.stack.slice(0, 6).map((s) => (
-                <span key={s} className="chip">
-                  {s}
                 </span>
               ))}
             </div>

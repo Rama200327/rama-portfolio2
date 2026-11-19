@@ -2,7 +2,7 @@ export const profile = {
   name: "Rama Abuaqoulah",
   firstName: "Rama",
   lastName: "Abuaqoulah",
-  role: "Quality Assurance Tester",
+  role: ".NET Full Stack Developer",
   location: "Amman, Jordan",
   email: "workrama380@gmail.com",
   phone: "+962 785 306 625",
@@ -15,8 +15,8 @@ export const profile = {
   cvUrl: `${import.meta.env.BASE_URL}Rama_Abuaqoulah_CV.pdf`,
   cvFileName: "Rama_Abuaqoulah_CV.pdf",
   summary:
-    "Detail-oriented Computer Science graduate with hands-on software testing experience. Skilled in designing test cases, documenting defects and validating fixes to ensure software quality, with a strong technical background in ASP.NET Core, SQL Server and the software development lifecycle.",
-  stack: ["Functional Testing", "Test Cases", "Bug Reports", "Regression Testing", "SQL Server", "ASP.NET Core", "C#", "Git"],
+    "I build web applications with ASP.NET Core, C# and SQL Server — and I test them properly, with hands-on QA experience on an enterprise insurance portal.",
+  stack: ["C#", "ASP.NET Core", "EF Core", "SQL Server", "JavaScript", "Razor", "QA Testing", "Git"],
 };
 
 export type Experience = {
@@ -202,7 +202,7 @@ export const stats = [
   { value: "40+", label: "Internship tasks delivered" },
 ];
 
-export const focusAreas = ["Quality Assurance", "Web Development", "Databases"];
+export const focusAreas = ["Web Development", "Databases", "Quality Assurance"];
 
 export const languages = [
   { name: "Arabic", level: "Native" },
